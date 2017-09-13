@@ -5,7 +5,7 @@
     {% if card_game_list %}
         <div class="row" id="catalog">
             {% for card_game in card_game_list %}
-                <div class="card card_games" style="width: 20rem;">
+                <div class="card card_games text-center" style="width: 20rem;">
                   <img class="card-img-top" src="..." alt="Card image cap">
                   <div class="card-body">
                     <h4 class="card-title">{{ card_game.name }}</h4>
@@ -15,7 +15,8 @@
                         {% if card_game.tags %}
 
                             {% for tag in card_game.tags.all %}
-                                <span class="badge badge-info">{{ tag.tag_name }}</span>
+
+                                <span class="badge badge-secondary" style="background-color:{{tag.tag_color}};">{{ tag.tag_name }}</span>
                             {% endfor %}
 
                         {% endif %}
