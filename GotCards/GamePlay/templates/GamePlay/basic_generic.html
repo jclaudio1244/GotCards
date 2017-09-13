@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <title>Got Cards?</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'GamePlay/style.css' %}" />
 </head>
 
 <body>
@@ -18,15 +20,19 @@
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'gameplay:index' %}">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Catalog</a>
+                <a class="nav-link" href="{% url 'gameplay:catalog' %}">Catalog</a>
               </li>
             </ul>
           </div>
         </nav>
     </div>
+    <div class="container" id="content">
+        {% block content %} {% endblock %}
+    </div>
+
 </body>
 </html>

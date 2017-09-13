@@ -1,1 +1,24 @@
-{% extends "basic_generic.html" %}
+{% extends "GamePlay/basic_generic.html" %}
+
+{% block content %}
+    <h1 id="catalog_heading">Card Game Catalog</h1>
+    {% if card_game_list %}
+        <div class="row" id="catalog">
+            {% for card_game in card_game_list %}
+                <div class="card card_games" style="width: 20rem;">
+                  <img class="card-img-top" src="..." alt="Card image cap">
+                  <div class="card-body">
+                    <h4 class="card-title">{{ card_game.name }}</h4>
+                    <p>Players: {{ card_game.min_number_of_players }} - {{card_game.max_number_of_players}}<span class="glyphicons glyphicons-user"></span></p>
+                    <p>Difficulty: {{ card_game.get_difficulty }}<span class="glyphicons glyphicons-user"></span></p>
+
+                    <a href="#" class="btn btn-primary">Learn to Play</a>
+                  </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>No Card Games Available</p>
+    {% endif %}
+
+{% endblock %}

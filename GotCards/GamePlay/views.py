@@ -15,5 +15,4 @@ class CatalogView(generic.ListView):
     context_object_name = 'card_game_list'
 
     def get_queryset(self):
-        """Return the last five published questions."""
-        return CardGame.objects
+        return CardGame.objects.all()
