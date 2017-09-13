@@ -6,9 +6,20 @@
 
 }
 
-.card_games{
+.card_games {
     margin: 2.5%;
 }
 
+.navbar{
+    background-color: #118AB2;
+}
+jumbotron {
+    margin-top:25%;
+}
+
+.learn {
+    background-color: #44CF6C;
+    color:white;
+}
 
 

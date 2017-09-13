@@ -9,7 +9,7 @@
                   <img class="card-img-top" src="..." alt="Card image cap">
                   <div class="card-body">
                     <h4 class="card-title">{{ card_game.name }}</h4>
-                    <p>Players: {{ card_game.min_number_of_players }} - {{card_game.max_number_of_players}}<span class="glyphicons glyphicons-user"></span></p>
+                    <p>Players: {{ card_game.min_number_of_players }} - {{card_game.max_number_of_players}}</p>
                     <p>Difficulty: {{ card_game.get_difficulty }}</p>
                     <p>
                         {% if card_game.tags %}
@@ -20,7 +20,7 @@
 
                         {% endif %}
                     </p>
-                    <a href="#" class="btn btn-primary">Learn to Play</a>
+                    <a href="#" class="btn learn">Learn to Play</a>
 
                   </div>
                 </div>
