@@ -10,9 +10,18 @@
                   <div class="card-body">
                     <h4 class="card-title">{{ card_game.name }}</h4>
                     <p>Players: {{ card_game.min_number_of_players }} - {{card_game.max_number_of_players}}<span class="glyphicons glyphicons-user"></span></p>
-                    <p>Difficulty: {{ card_game.get_difficulty }}<span class="glyphicons glyphicons-user"></span></p>
+                    <p>Difficulty: {{ card_game.get_difficulty }}</p>
+                    <p>
+                        {% if card_game.tags %}
 
+                            {% for tag in card_game.tags.all %}
+                                <span class="badge badge-info">{{ tag.tag_name }}</span>
+                            {% endfor %}
+
+                        {% endif %}
+                    </p>
                     <a href="#" class="btn btn-primary">Learn to Play</a>
+
                   </div>
                 </div>
             {% endfor %}
