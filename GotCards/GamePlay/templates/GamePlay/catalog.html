@@ -1,5 +1,14 @@
 {% extends "GamePlay/basic_generic.html" %}
 
+{% block nav %}
+    <li class="nav-item">
+        <a class="nav-link unselected" href="{% url 'gameplay:index' %}">Home <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item " style="color: #C42348;">
+        <a class="nav-link selected" href="{% url 'gameplay:catalog' %}">Catalog</a>
+    </li>
+{% endblock %}
+
 {% block content %}
     <h1 id="catalog_heading">Card Game Catalog</h1>
     {% if card_game_list %}
@@ -13,9 +22,7 @@
                     <p>Difficulty: {{ card_game.get_difficulty }}</p>
                     <p>
                         {% if card_game.tags %}
-
                             {% for tag in card_game.tags.all %}
-
                                 <span class="badge badge-secondary" style="background-color:{{tag.tag_color}};">{{ tag.tag_name }}</span>
                             {% endfor %}
 

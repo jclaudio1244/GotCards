@@ -8,6 +8,7 @@
 
 .card_games {
     margin: 2.5%;
+    background-color: #1EB9E5;
 }
 
 .navbar{
@@ -21,5 +22,21 @@ jumbotron {
     background-color: #44CF6C;
     color:white;
 }
+.logo {
+    color: #35CE8D;
+}
 
+#content{
+    background-color:#08B2E3;
+}
+
+.selected{
+  color:black;
+
+}
+
+.unselected{
+  color: rgba(0,0,0,.5)
+
+}
 
