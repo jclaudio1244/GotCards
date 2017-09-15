@@ -1,20 +1,47 @@
 {% extends "GamePlay/basic_generic.html" %}
 
+<!-- Nav links to determine which links are active -->
 {% block nav %}
-    <li class="nav-item" style="color: #C42348;">
-        <a class="nav-link selected" href="{% url 'gameplay:index' %}">Home <span class="sr-only">(current)</span></a>
+    <li class="nav-item" style="color: #ffffff;">
+        <a class="nav-link selected" style="color: #F2F2F2;" href="{% url 'gameplay:index' %}">Home <span class="sr-only">(current)</span></a>
     </li>
     <li class="nav-item">
-        <a class="nav-link unselected" href="{% url 'gameplay:catalog' %}">Catalog</a>
+        <a class="nav-link unselected" style="color: #F2F2F2;" href="{% url 'gameplay:catalog' %}">Catalog</a>
     </li>
 {% endblock %}
 
+<!-- Content Section of page -->
 {% block content %}
-    <div class="jumbotron text-center" style="margin-top:10%; background-color:#1EB9E5;">
-      <h1 class="display-3" >Got Cards? </h1>
+    <div class="jumbotron text-center" style="background-color: #35CE8D">
+      <h1 class="display-3" style="color:#095996;">Got Cards? </h1>
       <p class="lead">Learn how to play card games using our interactive tutorials with strategic scenarios to help you dominate the rest.</p>
       <p class="lead">
-        <a class="btn btn-primary btn-lg learn" href="#" role="button" style="background-color: #35CE8D; border: 0;">Learn a new card game</a>
+        <a class="btn btn-primary btn-lg learn " id="catalog-btn" href="#" role="button" style="background-color: #095996; border: 0;">Start Learning</a>
       </p>
     </div>
+    <!-- product main feature information -->
+    <div class="row" >
+        <div class="card text-center info " style="border-radius: 10px; width: 20rem;">
+            <div class="card-body">
+                <h4 class="card-title" style="color:#095996;">Rules cheat sheet</h4>
+                <p>Played Before? Then check out the rules cheat sheet. It's a complete list of the rules for the game you are playing. This serves as a quick guide to refresh your memory on how to play. </p>
+            </div>
+        </div>
+
+        <div class="card text-center info " style="border-radius: 10px; width: 20rem;">
+            <div class="card-body">
+                <h4 class="card-title" style="color:#095996;">Interactive tutorials</h4>
+                <p>Learn by doing? Then use our step by step interactive simulation to demonstrate the game-play and the rules for the card game. The tutorials can be adjusted depending on the number of players and other variations of the game.  </p>
+            </div>
+        </div>
+
+        <div class="card text-center info" style="border-radius: 10px; width: 20rem;">
+            <div class="card-body">
+                <h4 class="card-title" style="color:#095996;">Strategic Scenarios</h4>
+                <p>What's next? Take your skills to the next level by using our strategic scenarios. Learn to recognize, set up and execute different strategies to defeat any competition.     </p>
+            </div>
+        </div>
+
+    </div>
+
 {% endblock %}
